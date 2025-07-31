@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nail Care | Personal Grooming</title>
+  <link rel="stylesheet" href="style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body class="nail-page">
+  <header class="navbar nail-nav">
+    <div class="container nav-content">
+      <div class="logo">
+        <img src="/images/logo.png" alt="Personal Grooming Logo">
+        <h1>Personal<br>Grooming</h1>
+      </div>
+      <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+       <a href="about.html">About</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html" class="active">Contact</a>
+  </nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="nail-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Master the Art of <span class="highlight">Nail Care</span></h1>
+            <p class="subtitle">Professional techniques for healthy, beautiful nails at any age</p>
+            
+          </div>
+          <div class="hero-image">
+            <div class="nail-polish">
+              <img src="/images/Nail polish bottle.webp" alt="Nail polish bottle" class="bottle">
+              <img src="/images/Nail polish brush.webp" alt="Nail polish brush" class="brush">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nail Anatomy 101 -->
+    <section class="nail-anatomy">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nail <span class="highlight">Anatomy 101</span></h2>
+          <p>Understanding your nail structure for better care</p>
+        </div>
+        
+        <div class="anatomy-guide">
+          <div class="anatomy-image">
+            <img src="/images/Nail anatomy diagram.png" alt="Nail anatomy diagram">
+            <div class="anatomy-hotspots">
+              <div class="hotspot" data-part="cuticle"></div>
+              <div class="hotspot" data-part="nail-plate"></div>
+              <div class="hotspot" data-part="lunula"></div>
+              <div class="hotspot" data-part="matrix"></div>
+            </div>
+          </div>
+          <div class="anatomy-info">
+            <div class="part-info active" id="cuticle-info">
+              <h3>Cuticle</h3>
+              <p>The protective layer of skin at the base of your nail that seals the matrix from bacteria and infection.</p>
+              <p><strong>Care Tip:</strong> Keep cuticles moisturized and avoid cutting them to prevent hangnails and infections.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="nail-routine">
+      <div class="container">
+        <div class="section-header">
+          <h2>The Perfect <span class="highlight">Nail Care Routine</span></h2>
+          <p>Step-by-step guide for healthy natural nails</p>
+        </div>
+        
+        <div class="routine-steps">
+          <div class="step">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Cleaning</h3>
+              <p>Remove old polish with acetone-free remover. Soak nails in warm soapy water to soften cuticles.</p>
+              <div class="step-tip">
+                <span class="tip-icon">💡</span>
+                <p>Use a soft nail brush to clean under nails gently</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Shaping</h3>
+              <p>File in one direction with a fine-grit file. Choose a shape that complements your finger shape.</p>
+              <div class="shape-guide">
+                <div class="shape-option">
+                  <img src="/images/Oval shape.webp" alt="Oval shape">
+                  <p>Oval</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nail Health Guide -->
+    <section class="nail-health">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nail <span class="highlight">Health Indicators</span></h2>
+          <p>What your nails reveal about your health</p>
+        </div>
+        
+        <div class="health-grid">
+          <div class="health-card">
+            <div class="condition-image">
+              <img src="/images/Brittle nails.jpeg" alt="Brittle nails">
+            </div>
+            <div class="condition-info">
+              <h3>Brittle Nails</h3>
+              <p><strong>Possible Causes:</strong> Brittle nails can result from various factors, including frequent exposure to water, harsh chemicals (like detergents or nail polish removers), and excessive hand washing, which strips natural oils. Nutritional deficiencies—particularly in biotin, iron, zinc, or vitamins A, C, and D—may weaken nails, as can aging, which reduces moisture retention.</p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- At-Home Manicure Guide -->
+    <section class="manicure-guide">
+      <div class="container">
+        <div class="section-header">
+          <h2>Salon-Worthy <span class="highlight">At-Home Manicure</span></h2>
+          <p>Professional results without leaving your house</p>
+        </div>
+        
+        <div class="manicure-video">
+          <div class="video-placeholder">
+            <img src="/images/videoframe_3841.png" alt="Manicure tutorial">
+            <button class="play-btn">▶ Play Tutorial</button>
+          </div>
+          <div class="tools-checklist">
+            <h3>You'll Need:</h3>
+            <ul>
+              <li>Base coat</li>
+              <li>Quality nail polish</li>
+              <li>Top coat</li>
+              <li>Cuticle oil</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Nail Art Gallery -->
+    <section class="nail-art">
+      <div class="container">
+        <div class="section-header">
+          <h2>Nail Art <span class="highlight">Inspiration</span></h2>
+          <p>Creative designs to try at home</p>
+        </div>
+        
+        <div class="gallery">
+          <div class="gallery-item">
+            <img src="/images/French tip nails.jpg" alt="French tip nails">
+            <div class="gallery-overlay">
+              <p>Classic French</p>
+            </div>
+          </div>
+          
+          <!-- Additional gallery items would follow -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Recommendations -->
+    <section class="nail-products">
+      <div class="container">
+        <div class="section-header">
+          <h2>Expert <span class="highlight">Product Picks</span></h2>
+          <p>Our top-rated nail care essentials</p>
+        </div>
+        
+        <div class="product-carousel">
+          <div class="product-card">
+            <div class="product-badge">Best Overall</div>
+            <img src="/images/Cuticle oil.png" alt="Cuticle oil">
+            <h3>Hydrating Cuticle Oil</h3>
+            <div class="product-rating">★★★★★</div>
+          </div>
+          
+          <div class="product-card">
+            <div class="product-badge">Best Overall</div>
+            <img src="/images/Expert Product Picks.jpg" alt="Cuticle oil">
+            <h3>Organic Cuticle Oil</h3>
+            <div class="product-rating">★★★★★</div>
+            </h3>
+          </div>       
+         </div>
+      </div>
+    </section>
+  </main>
+
+   <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="/images/logo.png" alt="Personal Grooming Logo">
+          <h3>Personal Grooming</h3>
+          <p>Master the art of personal care</p>
+         </div class ="">
+          <div class="link-group">
+            <h4>Learn</h4>
+            <a href="post-hair-growth.html">Personal Hygiene</a>
+            <a href="post-hydration-science.html">skinCare</a>
+            <a href="post-minimalist-makeup.html">Makeup & Beauty</a>
+            <a href="post-nail-care.html">Nail Care</a>
+            <a href="post-hair-care.html">Hair Care</a>
+          </div>
+          <div class="link-group">
+            <h4>Quick links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="skincare.html">Skincare</a>
+            <a href="nail.html">Nail Care</a>
+            <a href="hair.html">Hair Care</a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Personal Grooming. All rights reserved.</p> 
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    // GSAP Animations
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+      
+      // Hero animation
+      gsap.from('.nail-hero h1', {
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        ease: "back.out(1.2)"
+      });
+      
+      gsap.from('.nail-hero .subtitle', {
+        duration: 0.6,
+        y: 30,
+        opacity: 1,
+        delay: 0.2,
+        ease: "power2.out"
+      });
+      
+      gsap.from('.hero-buttons', {
+        duration: 0.5,
+        y: 20,
+        opacity: 1,
+        delay: 0.4,
+        ease: "power2.out"
+      });
+      
+      gsap.from('.bottle', {
+        duration: 0.8,
+        rotation: -10,
+        x: 50,
+        opacity: 1,
+        delay: 0.3,
+        ease: "back.out(1.2)"
+      });
+      
+      gsap.from('.brush', {
+        duration: 0.8,
+        rotation: 10,
+        x: -50,
+        opacity: 1,
+        delay: 0.6,
+        ease: "back.out(1.2)"
+      });
+      
+      // Anatomy guide animation
+      gsap.from('.anatomy-guide', {
+        scrollTrigger: {
+          trigger: '.nail-anatomy',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        ease: "power2.out"
+      });
+      
+      // Routine steps animation
+      gsap.from('.step', {
+        scrollTrigger: {
+          trigger: '.nail-routine',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.6,
+        y: 50,
+        opacity: 1,
+        stagger: 0.15,
+        ease: "back.out(1.2)"
+      });
+      
+      // Health cards animation
+      gsap.from('.health-card', {
+        scrollTrigger: {
+          trigger: '.nail-health',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.6,
+        scale: 0.9,
+        opacity: 1,
+        stagger: 0.1,
+        ease: "back.out(1.7)"
+      });
+      
+      // Manicure guide animation
+      gsap.from('.manicure-video', {
+        scrollTrigger: {
+          trigger: '.manicure-guide',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        ease: "power2.out"
+      });
+      
+      // Gallery animation
+      gsap.from('.gallery-item', {
+        scrollTrigger: {
+          trigger: '.nail-art',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.6,
+        y: 50,
+        opacity: 1,
+        stagger: 0.1,
+        ease: "power2.out"
+      });
+      
+      // Product carousel animation
+      gsap.from('.product-card', {
+        scrollTrigger: {
+          trigger: '.nail-products',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.5,
+        rotation: 5,
+        opacity: 1,
+        stagger: 0.1,
+        ease: "back.out(1.7)"
+      });
+      
+      // Hotspot interaction
+      const hotspots = document.querySelectorAll('.hotspot');
+      const partInfos = document.querySelectorAll('.part-info');
+      
+      hotspots.forEach(hotspot => {
+        hotspot.addEventListener('click', () => {
+          const part = hotspot.getAttribute('data-part');
+          
+          // Hide all info
+          partInfos.forEach(info => info.classList.remove('active'));
+          
+          // Show selected info
+          document.getElementById(`${part}-info`).classList.add('active');
+          
+          // Animation
+          gsap.from(`#${part}-info`, {
+            duration: 0.5,
+            y: 20,
+            opacity: 1,
+            ease: "power2.out"
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

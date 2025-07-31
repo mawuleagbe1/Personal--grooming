@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog | Personal Grooming</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <img src="/images/logo.png" alt="Personal Grooming Logo" />
+        <h1>Personal<br />Grooming</h1>
+      </div>
+      <nav class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <!-- <div class="dropdown">
+          <button class="dropbtn">Aspects
+            <i class="dropdown-arrow">▼</i>
+          </button>
+          <div class="dropdown-content">
+            <a href="skincare.html">Skincare</a>
+            <a href="hair.html">Hair Care</a>
+            <a href="beauty.html">Makeup & Beauty</a>
+            <a href="hygine.html">Personal Hygiene</a>
+            <a href="nail.html">Nail Care</a>
+          </div>
+        </div> -->
+        <a href="blog.html" class="active">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Blog Hero Section -->
+    <section class="blog-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Personal Grooming <span class="highlight">Blog</span></h1>
+            <p>
+              Discover the latest trends, expert tips, and in-depth guides to elevate your personal grooming routine. 
+              Our blog covers everything from skincare science to seasonal beauty trends.
+            </p>
+            <div class="search-bar">
+              <input type="text" placeholder="Search articles...">
+              <button class="search-btn">Search</button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="/images/Woman reading grooming blog.jpg" alt="Woman reading grooming blog">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Post Section -->
+    <section class="featured-post">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured <span class="highlight">Article</span></h2>
+          <p>Our most popular and recent grooming insights</p>
+        </div>
+        <div class="featured-card">
+          <div class="card-image">
+            <img src="/images/Featured post about skincare.jpg" alt="Featured post about skincare">
+            <span class="category-tag skincare">Skincare</span>
+          </div>
+          <div class="card-content">
+            <div class="post-meta">
+              <span class="date">June 15, 2025</span>
+              <span class="reading-time">8 min read</span>
+            </div>
+            <h3>The Science Behind Hydration: Why Your Skin Needs More Than Just Water</h3>
+            <p>
+              Discover the molecular secrets of skin hydration and learn why drinking water alone isn't enough for 
+              glowing skin. This comprehensive guide explores humectants, emollients, and occlusives - the holy 
+              trinity of skin hydration...
+            </p>
+            <div class="author">
+              <img src="/images/Sarah Johnson.jpg" alt="Author Sarah Johnson">
+              <div class="author-info">
+                <span class="name">Sarah Johnson</span>
+                <span class="title">Certified Dermatologist</span>
+              </div>
+            </div>
+            <a href="post-hydration-science.html" class="read-more">Read Full Article →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+      <div class="container">
+        <h2>Browse by <span class="highlight">Category</span></h2>
+        <div class="categories-grid">
+          <a href="skincare.html" class="category-card skincare">
+            <img src="/images/skincare.avif" alt="Skincare">
+            <h3>Skincare</h3>
+          </a>
+          <a href="hair.html" class="category-card haircare">
+            <img src="/images/haircare.avif" alt="Hair Care">
+            <h3>Hair Care</h3>
+          </a>
+          <a href="beauty.html" class="category-card makeup">
+            <img src="/images/makeup.avif" alt="Makeup">
+            <h3>Makeup</h3>
+          </a>
+          <a href="hygine.html" class="category-card hygiene">
+            <img src="/images/hygiene.avif" alt="Hygiene">
+            <h3>Hygiene</h3>
+          </a>
+          <a href="nail.html" class="category-card nails">
+            <img src="/images/Nails.avif" alt="Nail Care">
+            <h3>Nail Care</h3>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Articles Section -->
+    <section class="latest-articles">
+      <div class="container">
+        <div class="section-header">
+          <h2>Latest <span class="highlight">Articles</span></h2>
+          <p>Fresh grooming insights and expert advice</p>
+        </div>
+        <div class="articles-grid">
+          <!-- Article 1 -->
+          <article class="article-card">
+            <div class="card-image">
+              <img src="/images/Summer skincare.avif" alt="Summer skincare">
+              <span class="category-tag skincare">Skincare</span>
+            </div>
+            <div class="card-content">
+              <div class="post-meta">
+                <span class="date">June 10, 2025</span>
+                <span class="reading-time">6 min read</span>
+              </div>
+              <h3>Summer Skincare Essentials: Protect Your Skin from Sun Damage</h3>
+              <p>
+                Learn how to adjust your skincare routine for summer months with these essential tips for sun 
+                protection, hydration, and after-sun care...
+              </p>
+              <a href="post-summer-skincare.html" class="read-more">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Article 2 -->
+          <article class="article-card">
+            <div class="card-image">
+              <img src="/images/Hair growth.avif" alt="Hair growth">
+              <span class="category-tag haircare">Hair Care</span>
+            </div>
+            <div class="card-content">
+              <div class="post-meta">
+                <span class="date">June 5, 2025</span>
+                <span class="reading-time">9 min read</span>
+              </div>
+              <h3>The Truth About Hair Growth: Myths vs. Science-Backed Facts</h3>
+              <p>
+                We debunk common hair growth myths and share scientifically proven methods to promote healthier, 
+                faster-growing hair...
+              </p>
+              <a href="post-hair-growth.html" class="read-more">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Article 3 -->
+          <article class="article-card">
+            <div class="card-image">
+              <img src="/images/Minimalist makeup.avif" alt="Minimalist makeup">
+              <span class="category-tag makeup">Makeup</span>
+            </div>
+            <div class="card-content">
+              <div class="post-meta">
+                <span class="date">May 28, 2025</span>
+                <span class="reading-time">5 min read</span>
+              </div>
+              <h3>Minimalist Makeup: 5 Products for a Flawless Natural Look</h3>
+              <p>
+                Discover how to achieve a polished appearance with just five essential makeup products - perfect 
+                for busy mornings or a fresh-faced everyday look...
+              </p>
+              <a href="post-minimalist-makeup.html" class="read-more">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Article 4 -->
+          <article class="article-card">
+            <div class="card-image">
+              <img src="/images/Oral hygiene.avif" alt="Oral hygiene">
+              <span class="category-tag hygiene">Hygiene</span>
+            </div>
+            <div class="card-content">
+              <div class="post-meta">
+                <span class="date">May 22, 2025</span>
+                <span class="reading-time">7 min read</span>
+              </div>
+              <h3>Beyond Brushing: The Complete Guide to Optimal Oral Hygiene</h3>
+              <p>
+                Your complete guide to oral care that goes beyond basic brushing - learn about tongue scraping, 
+                interdental cleaning, and the latest in dental tech...
+              </p>
+              <a href="post-oral-hygiene.html" class="read-more">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Article 5 -->
+          <article class="article-card">
+            <div class="card-image">
+              <img src="/images/Nail art.avif" alt="Nail art">
+              <span class="category-tag nails">Nail Care</span>
+            </div>
+            <div class="card-content">
+              <div class="post-meta">
+                <span class="date">May 15, 2025</span>
+                <span class="reading-time">4 min read</span>
+              </div>
+              <h3>Summer Nail Art Trends 2025: Colors and Designs to Try</h3>
+              <p>
+                Get inspired with this season's hottest nail trends, from vibrant citrus shades to minimalist 
+                negative space designs that are perfect for summer...
+              </p>
+              <a href="post-nail-trends.html" class="read-more">Read More →</a>
+            </div>
+          </article>
+
+          <!-- Article 6 -->
+          <article class="article-card">
+            <div class="card-image">
+              <img src="/images/Men's grooming.avif" alt="Men's grooming">
+              <span class="category-tag trends">Trends</span>
+            </div>
+            <div class="card-content">
+              <div class="post-meta">
+                <span class="date">May 8, 2025</span>
+                <span class="reading-time">8 min read</span>
+              </div>
+              <h3>Men's Grooming Revolution: Breaking Down Stereotypes in 2025</h3>
+              <p>
+                Explore how men's grooming is evolving beyond traditional norms, with increasing focus on skincare, 
+                self-care rituals, and gender-neutral beauty...
+              </p>
+              <a href="post-mens-grooming.html" class="read-more">Read More →</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+   
+  </main>
+
+   <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="/images/logo.png" alt="Personal Grooming Logo">
+          <h3>Personal Grooming</h3>
+          <p>Master the art of personal care</p>
+         </div class ="">
+          <div class="link-group">
+            <h4>Learn</h4>
+            <a href="post-hair-growth.html">Personal Hygiene</a>
+            <a href="post-hydration-science.html">skinCare</a>
+            <a href="post-minimalist-makeup.html">Makeup & Beauty</a>
+            <a href="post-nail-care.html">Nail Care</a>
+            <a href="post-hair-care.html">Hair Care</a>
+          </div>
+          <div class="link-group">
+            <h4>Quick links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="skincare.html">Skincare</a>
+            <a href="nail.html">Nail Care</a>
+            <a href="hair.html">Hair Care</a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Personal Grooming. All rights reserved.</p> 
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    // GSAP Animations
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Hero section animation
+      gsap.from('.blog-hero .hero-text', {
+        duration: 1,
+        y: 50,
+        opacity: 1,
+        ease: "power3.out"
+      });
+
+      gsap.from('.blog-hero .hero-image', {
+        duration: 1,
+        x: 50,
+        opacity: 1,
+        delay: 0.3,
+        ease: "power3.out"
+      });
+
+      // Featured post animation
+      gsap.from('.featured-card', {
+        scrollTrigger: {
+          trigger: '.featured-post',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        ease: "power2.out"
+      });
+
+      // Categories animation
+      gsap.from('.categories-grid a', {
+        scrollTrigger: {
+          trigger: '.blog-categories',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.6,
+        y: 30,
+        opacity: 1,
+        stagger: 0.1,
+        ease: "power1.out"
+      });
+
+      // Articles animation
+      gsap.from('.article-card', {
+        scrollTrigger: {
+          trigger: '.latest-articles',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.6,
+        y: 50,
+        opacity: 1,
+        stagger: 0.1,
+        ease: "power1.out"
+      });
+
+      // Newsletter animation
+      gsap.from('.newsletter-content', {
+        scrollTrigger: {
+          trigger: '.newsletter',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        ease: "power2.out"
+      });
+
+      // Tags animation
+      gsap.from('.tag', {
+        scrollTrigger: {
+          trigger: '.popular-tags',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.4,
+        scale: 0.8,
+        opacity: 1,
+        stagger: 0.05,
+        ease: "back.out(1.7)"
+      });
+    });
+  </script>
+</body>
+</html>

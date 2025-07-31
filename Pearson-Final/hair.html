@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hair Care & Styling | Personal Grooming</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <img src="/images/logo.png" alt="Personal Grooming Logo">
+        <h1>Personal<br>Grooming</h1>
+      </div>
+      <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+       <a href="about.html">About</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html" class="active">Contact</a>
+</nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hair-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Transform Your <span class="highlight">Hair Routine</span></h1>
+            <p class="subtitle">Professional techniques for healthy, beautiful hair tailored to your unique texture</p>
+            <div class="hair-quiz-button">
+               <img src="/images/Person with beautiful hair.jpg" alt="Person with beautiful hair">
+            </div>
+            <div class="hair-badge">
+              <div class="badge-icon">✂️</div>
+              <p>Approved by master stylists</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hair Type Identifier -->
+    <section class="hair-type-identifier">
+      <div class="container">
+        <h2>What's Your <span class="highlight">Hair Type</span>?</h2>
+        <p class="section-subtitle">Understanding your hair is the first step to proper care</p>
+        
+        <div class="hair-type-cards">
+          <div class="hair-type-card">
+            <div class="hair-image">
+              <img src="/images/Straight hair.jpg" alt="Straight hair">
+            </div>
+            <div class="hair-content">
+              <h3>Straight Hair</h3>
+              <ul>
+                <li>Naturally smooth texture</li>
+                <li>Prone to oiliness</li>
+                <li>Can lack volume</li>
+              </ul>
+              <a href="straight-hair-care.html"><button class="hair-type-btn">View Care Routine</button></a>
+            </div>
+          </div>
+          
+          <div class="hair-type-card">
+            <div class="hair-image">
+              <img src="/images/Wavy hair.jpg" alt="Wavy hair">
+            </div>
+            <div class="hair-content">
+              <h3>Wavy Hair</h3>
+              <ul>
+                <li>S-shaped pattern</li>
+                <li>Prone to frizz</li>
+                <li>Combination texture</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="hair-type-card">
+            <div class="hair-image">
+              <img src="/images/Curly hair.jpg" alt="Curly hair">
+            </div>
+            <div class="hair-content">
+              <h3>Curly Hair</h3>
+              <ul>
+                <li>Defined spiral pattern</li>
+                <li>Needs extra moisture</li>
+                <li>Prone to dryness</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="hair-type-card">
+            <div class="hair-image">
+              <img src="/images/Coily hair.jpg" alt="Coily hair">
+            </div>
+            <div class="hair-content">
+              <h3>Coily/Kinky Hair</h3>
+              <ul>
+                <li>Tight zig-zag pattern</li>
+                <li>Fragile structure</li>
+                <li>Needs intense moisture</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hair Porosity Guide -->
+    <section class="porosity-guide">
+      <div class="container">
+        <div class="section-header">
+          <h2>Understanding <span class="highlight">Hair Porosity</span></h2>
+          <p>Why it matters and how to care for your porosity level</p>
+        </div>
+        
+        <div class="porosity-test">
+          <h3>Quick Porosity Test:</h3>
+          <p>Place a strand of clean hair in a glass of water. Does it:</p>
+          <div class="test-options">
+            <div class="option-card">
+              <div class="option-icon">↑</div>
+              <h4>Float on top</h4>
+              <p><strong>Low porosity:</strong> Cuticles are tight, products sit on hair</p>
+            </div>
+            <div class="option-card">
+              <div class="option-icon">→</div>
+              <h4>Float in middle</h4>
+              <p><strong>Medium porosity:</strong> Cuticles are slightly raised, ideal balance</p>
+            </div>
+            <div class="option-card">
+              <div class="option-icon">↓</div>
+              <h4>Sink quickly</h4>
+              <p><strong>High porosity:</strong> Cuticles are open, absorbs quickly but loses moisture</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="porosity-care">
+          <div class="porosity-tabs">
+            <button class="porosity-tab active" data-porosity="low">Low Porosity</button>
+          </div>
+          
+          <div class="porosity-content active" id="low">
+            <div class="care-tips">
+              <h4>Care Tips:</h4>
+              <ul>
+                <li>Use heat to help products penetrate (warm towel wrap)</li>
+                <li>Look for lightweight, liquid-based products</li>
+                <li>Clarify regularly to prevent buildup</li>
+              </ul>
+            </div>
+            <div class="product-recs">
+              <h4>Recommended Products:</h4>
+              <ul>
+                <li>Shea Moisture Low Porosity Shampoo</li>
+                <li>Kinky-Curly Knot Today Leave-In</li>
+                <li>Camille Rose Honey Hydrate</li>
+              </ul>
+            </div>
+            <div class="product-recs">
+              <h4>How To Use The Above Products:</h4>
+              <P>To use the recommended products, start with the Shea Moisture Low Porosity Shampoo, applying it to wet hair and massaging it into the scalp before rinsing thoroughly. Follow with the Kinky-Curly Knot Today Leave-In, applying a generous amount to damp hair and detangling with a wide-tooth comb. Finally, use the Camille Rose Honey Hydrate as a deep treatment by applying it to clean, damp hair, covering with a plastic cap, and leaving it on for at least 30 minutes before rinsing.</P>
+            </div>
+          </div>
+
+          <div class="porosity-care">
+          <div class="porosity-tabs">
+            <button class="porosity-tab active" data-porosity="low">Medium Porosity</button>
+          </div>
+
+          <div class="porosity-content active" id="medium">
+            <div class="care-tips">
+              <h4>Care Tips:</h4>
+              <ul>
+                <li>Use moderate protein (1-2x/month) to maintain strength</li>
+                <li>Seal moisture with light oils (argan, jojoba) or butter</li>
+                <li> Avoid heavy products that can weigh hair down</li>
+              </ul>
+            </div>
+            <div class="product-recs">
+              <h4>Recommended Products:</h4>
+              <ul>
+                <li>Shea Moisture Coconut & Hibiscus Curl & Shine Shampoo</li>
+                <li>Mielle Organics Babassu & Mint Deep Conditioner</li>
+                <li>Camille Rose Curl Maker</li>
+              </ul>
+            </div>
+            <div class="product-recs">
+              <h4>How To Use The Above Products:</h4>
+              <P>To use the recommended products, start with the Shea Moisture Coconut & Hibiscus Curl & Shine Shampoo, applying it to wet hair and massaging it into the scalp before rinsing thoroughly. Follow with the Mielle Organics Babassu & Mint Deep Conditioner, applying a generous amount to damp hair and detangling with a wide-tooth comb. Finally, use the Camille Rose Curl Maker as a styling product by applying it to clean, damp hair and defining your curls as desired.</P>
+            </div>
+          </div>
+
+          <div class="porosity-content" id="high">
+            <div class="care-tips">
+              <h4>Care Tips:</h4>
+              <ul>
+                <li>Focus on moisture retention</li>
+                <li>Use heavier oils and butters</li>
+                <li>Minimize heat styling</li>
+              </ul>
+            </div>
+            <div class="product-recs">
+              <h4>Recommended Products:</h4>
+              <ul>
+                <li>Shea Moisture Raw Shea Butter Shampoo</li>
+                <li>Camille Rose Curl Maker</li>
+                <li>Oyin Handmade Whipped Pudding</li>
+              </ul>
+            </div>
+            <div class="product-recs">
+              <h4>How To Use The Above Products:</h4>
+              <P>To use the recommended products, start with the Shea Moisture Raw Shea Butter Shampoo, applying it to wet hair and massaging it into the scalp before rinsing thoroughly. Follow with the Camille Rose Curl Maker, applying a generous amount to damp hair and styling as desired. Finally, use the Oyin Handmade Whipped Pudding as a deep treatment by applying it to clean, damp hair, covering with a plastic cap, and leaving it on for at least 30 minutes before rinsing.</P>
+            </div>
+          </div>
+
+          <div class="porosity-care">
+          <div class="porosity-tabs">
+            <button class="porosity-tab active" data-porosity="low">High Porosity</button>
+          </div>
+          
+          <div class="porosity-content active" id="low">
+            <div class="care-tips">
+              <h4>Care Tips:</h4>
+              <ul>
+                <li>Use the LCO/LOC Method.</li>
+                <li>Use warm water when washing.</li>
+                <li>Avoid heat & harsh chemical.</li>
+              </ul>
+            </div>
+            <div class="product-recs">
+              <h4>Recommended Products:</h4>
+              <ul>
+                <li>Shea Moisture Jamaican Black Castor Oil Shampo.</li>
+                <li>The Mane Choice Tropical Moringa Sweet Oil & Honey Styling Gel.</li>
+                <li>Camille Rose Naturals Moisture Milk.</li>
+              </ul>
+            </div>
+            <div class="product-recs">
+              <h4>How To Use The Above Products:</h4>
+              <p>To use the recommended products, start with the Shea Moisture Jamaican Black Castor Oil Shampoo, applying it to wet hair and massaging it into the scalp before rinsing thoroughly. Follow with the The Mane Choice Tropical Moringa Sweet Oil & Honey Styling Gel, applying a generous amount to damp hair and styling as desired. Finally, use the Camille Rose Naturals Moisture Milk as a leave-in conditioner by applying it to clean, damp hair and detangling with a wide-tooth comb.</p>
+            </div>
+          </div>
+
+          <div class="porosity-content" id="medium">
+            <div class="care-tips">
+              <h4>Care Tips:</h4>
+              <ul>
+                <li>Use a balance of protein and moisture</li>
+                <li>Incorporate regular deep conditioning</li>
+                <li>Protect from environmental stressors</li>
+              </ul>
+            </div>
+            <div class="product-recs">
+              <h4>Recommended Products:</h4>
+              <ul>
+                <li>Shea Moisture Jamaican Black Castor Oil Shampoo</li>
+                <li>Ouidad Moisture Lock Leave-In Conditioner</li>
+                <li>DevaCurl Heaven In Hair</li>
+              </ul>
+            </div>
+            <div class="product-recs">
+              <h4>How To Use The Above Products:</h4>
+              <P>To use the recommended products, start with the Shea Moisture Jamaican Black Castor Oil Shampoo, applying it to wet hair and massaging it into the scalp before rinsing thoroughly. Follow with the Ouidad Moisture Lock Leave-In Conditioner, applying a generous amount to damp hair and detangling with a wide-tooth comb. Finally, use the DevaCurl Heaven In Hair as a deep treatment by applying it to clean, damp hair, covering with a plastic cap, and leaving it on for at least 30 minutes before rinsing.</P>
+            </div>
+          </div>
+
+          <div class="porosity-content" id="high">
+            <div class="care-tips">
+              <h4>Care Tips:</h4>
+              <ul>
+                <li>Focus on moisture retention</li>
+                <li>Use heavier oils and butters</li>
+                <li>Minimize heat styling</li>
+              </ul>
+            </div>
+            <div class="product-recs">
+              <h4>Recommended Products:</h4>
+              <ul>
+                <li>Shea Moisture Raw Shea Butter Shampoo</li>
+                <li>Camille Rose Curl Maker</li>
+                <li>Oyin Handmade Whipped Pudding</li>
+              </ul>
+            </div>
+            <div class="product-recs">
+              <h4>How To Use The Above Products:</h4>
+              <P>To use the recommended products, start with the Shea Moisture Raw Shea Butter Shampoo, applying it to wet hair and massaging it into the scalp before rinsing thoroughly. Follow with the Camille Rose Curl Maker, applying a generous amount to damp hair and styling as desired. Finally, use the Oyin Handmade Whipped Pudding as a deep treatment by applying it to clean, damp hair, covering with a plastic cap, and leaving it on for at least 30 minutes before rinsing.</P>
+            </div>
+          </div>
+
+          <!-- Other porosity contents would follow same pattern -->
+        </div>
+      </div>
+      
+    </section>
+
+    <!-- Essential Hair Care Routine -->
+    <section class="hair-routine">
+      <div class="container">
+        <h2>The <span class="highlight">Essential</span> Hair Care Routine</h2>
+        
+        <div class="routine-steps">
+          <div class="step">
+            <div class="step-header">
+              <div class="step-number">1</div>
+              <h3>Cleansing</h3>
+            </div>
+            <div class="step-content">
+              <p><strong>Frequency:</strong> 1-2 times weekly (varies by hair type)</p>
+              <p><strong>Key Tips:</strong> Focus on scalp, use sulfate-free for curly/coily hair</p>
+              <div class="step-image">
+                <img src="/images/Proper hair washing technique.jpg" alt="Proper hair washing technique">
+              </div>
+            </div>
+          </div>
+          
+          <div class="step">
+            <div class="step-header">
+              <div class="step-number">2</div>
+              <h3>Conditioning</h3>
+            </div>
+            <div class="step-content">
+              <p><strong>Frequency:</strong> Every wash day</p>
+              <p><strong>Key Tips:</strong> Apply mid-length to ends, use wide-tooth comb to distribute</p>
+              <div class="step-image">
+                <img src="/images/hair-conditioning.jpg" alt="Proper conditioning technique">
+              </div>
+            </div>
+          </div>
+          
+          <!-- Additional steps would follow same pattern -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Styling Techniques Section -->
+    <section class="styling-techniques">
+      <div class="container">
+        <div class="section-header">
+          <h2>Professional <span class="highlight">Styling Techniques</span></h2>
+          <p>Master these looks at home with our step-by-step guides</p>
+        </div>
+        
+        <div class="technique-cards">
+          <div class="technique-card">
+            <div class="technique-image">
+              <img src="/images/Blowout technique.jpg" alt="Blowout technique">
+              <div class="difficulty">Beginner</div>
+            </div>
+            <div class="technique-content">
+              <h3>The Perfect Blowout</h3>
+              <p class="tools-needed">
+                To achieve the perfect blowout, you'll need a round brush for smoothness and volume, a heat protectant to shield your hair from damage, and a blow dryer to style and set your look.
+              </p>
+            </div>
+          </div>
+          
+          <div class="technique-card">
+            <div class="technique-image">
+              <img src="/images/braids.jpg" alt="Braiding technique">
+              <div class="difficulty">Intermediate</div>
+            </div>
+            <div class="technique-content">
+              <h3>Protective Braiding</h3>
+              <p class="tools-needed">
+              To achieve protective braiding, start by using a rat-tail comb to section your hair neatly, ensuring clean parts for styles like cornrows or box braids while gently detangling to prevent breakage. Next, apply edge control to smooth down flyaways and baby hairs, using a brush or your fingertips to lay edges neatly before setting them with a silk scarf for extra hold.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Additional technique cards would follow -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Hair Problems -->
+    <section class="hair-problems">
+      <div class="container">
+        <h2>Solving Common <span class="highlight">Hair Problems</span></h2>
+        
+        <div class="problems-grid">
+          <div class="problem-card">
+            <div class="problem-icon">💇</div>
+            <h3>Split Ends</h3>
+            <p><strong>Solution:</strong> Regular trims (every 8-12 weeks), seal ends with light oil</p>
+          </div>
+          
+          <div class="problem-card">
+            <div class="problem-icon">🌀</div>
+            <h3>Frizz</h3>
+            <p><strong>Solution:</strong> Humectants in humid climates, anti-humectants in dry climates</p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Expert Advice Section -->
+    <section class="expert-advice">
+      <div class="container">
+        <div class="expert-header">
+          <h2>Stylist <span class="highlight">Secrets</span></h2>
+          <p>Professional tips you won't find anywhere else.</p>
+        </div>
+        
+        <div class="advice-cards">
+          <div class="advice-card">
+            <div class="expert-image">
+              <img src="/images/stylist1.jpg" alt="Celebrity stylist">
+            </div>
+            <div class="advice-content">
+              <h3>"The Cold Water Rinse"</h3>
+              <p class="expert-name">Jamal Wilson, Celebrity Stylist</p>
+              <p class="advice-text">"Finish every wash with a cold water rinse to seal cuticles and boost shine. This simple step makes a dramatic difference in hair health."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+   <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="/images/logo.png" alt="Personal Grooming Logo">
+          <h3>Personal Grooming</h3>
+          <p>Master the art of personal care</p>
+         </div class ="">
+          <div class="link-group">
+            <h4>Learn</h4>
+            <a href="post-hair-growth.html">Personal Hygiene</a>
+            <a href="post-hydration-science.html">skinCare</a>
+            <a href="post-minimalist-makeup.html">Makeup & Beauty</a>
+            <a href="post-nail-care.html">Nail Care</a>
+            <a href="post-hair-care.html">Hair Care</a>
+          </div>
+          <div class="link-group">
+            <h4>Quick links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="skincare.html">Skincare</a>
+            <a href="nail.html">Nail Care</a>
+            <a href="hair.html">Hair Care</a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Personal Grooming. All rights reserved.</p> 
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    // GSAP Animations
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+      
+      // Hero animation
+      gsap.from('.hair-hero h1', {
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        ease: "back.out(1.2)"
+      });
+      
+      gsap.from('.hair-hero .subtitle', {
+        duration: 0.6,
+        y: 30,
+        opacity: 1,
+        delay: 0.2,
+        ease: "power2.out"
+      });
+      
+      gsap.from('.hair-quiz-button', {
+        duration: 0.5,
+        y: 20,
+        opacity: 1,
+        delay: 0.4,
+        ease: "power2.out"
+      });
+      
+      gsap.from('.hero-image', {
+        duration: 0.8,
+        x: 100,
+        opacity: 1,
+        ease: "back.out(1.2)"
+      });
+      
+      // Hair type cards animation
+      gsap.from('.hair-type-card', {
+        scrollTrigger: {
+          trigger: '.hair-type-identifier',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.6,
+        y: 50,
+        opacity: 1,
+        stagger: 0.15,
+        ease: "back.out(1.2)"
+      });
+      
+      // Porosity test animation
+      gsap.from('.option-card', {
+        scrollTrigger: {
+          trigger: '.porosity-test',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.6,
+        scale: 0.9,
+        opacity: 1,
+        stagger: 0.1,
+        ease: "back.out(1.7)"
+      });
+      
+      // Routine steps animation
+      gsap.from('.step', {
+        scrollTrigger: {
+          trigger: '.hair-routine',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        x: -50,
+        opacity: 1,
+        stagger: 0.2,
+        ease: "power2.out"
+      });
+      
+      // Technique cards animation
+      gsap.from('.technique-card', {
+        scrollTrigger: {
+          trigger: '.styling-techniques',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.6,
+        y: 50,
+        opacity: 1,
+        stagger: 0.15,
+        ease: "back.out(1.2)"
+      });
+      
+      // Problem cards animation
+      gsap.from('.problem-card', {
+        scrollTrigger: {
+          trigger: '.hair-problems',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.5,
+        rotation: 5,
+        opacity: 1,
+        stagger: 0.1,
+        ease: "back.out(1.7)"
+      });
+      
+      // Tab switching functionality
+      const porosityTabs = document.querySelectorAll('.porosity-tab');
+      const porosityContents = document.querySelectorAll('.porosity-content');
+      
+      porosityTabs.forEach(tab => {
+        tab.addEventListener('click', () => {
+          // Remove active class from all tabs and contents
+          porosityTabs.forEach(tab => tab.classList.remove('active'));
+          porosityContents.forEach(content => content.classList.remove('active'));
+          
+          // Add active class to clicked tab and corresponding content
+          tab.classList.add('active');
+          const porosityType = tab.getAttribute('data-porosity');
+          document.getElementById(porosityType).classList.add('active');
+          
+          // Animation for content
+          gsap.from(`#${porosityType}`, {
+            duration: 0.5,
+            y: 30,
+            opacity: 1,
+            ease: "power2.out"
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

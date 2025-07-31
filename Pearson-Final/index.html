@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Grooming</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <img src="/images/logo.png" alt="Personal Grooming Logo" />
+        <h1>Personal<br />Grooming</h1>
+      </div>
+       <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+       <a href="about.html">About</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html" class="active">Contact</a>
+</nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-text">
+          <h2>Master the Art of<br><span class="highlight">Personal Grooming</span></h2>
+          <p>
+            Transform your daily routine with expert grooming techniques, professional tips, and comprehensive guides. From skincare to styling, we'll help you look and feel your absolute best.
+          </p>
+          <div class="hero-buttons">
+           <a href="important.html"> <button class="btn blue">Learn More</button></a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="/images/Woman grooming with mirror.webp" alt="Woman grooming with mirror" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+      <div class="container">
+        <h2 class="section-title">
+          Master Every Aspect of <span class="highlight">Personal Grooming</span>
+        </h2>
+        <p class="section-subtitle">
+          From daily essentials to advanced techniques, we cover everything you need to know about personal care and grooming.
+        </p>
+
+        <div class="momo-grid">
+          <div class="momo">
+            <div class="momo-icon">
+              <img src="/images/icon-skincare.png" alt="Skincare Icon" />
+            </div>
+            <h3>Skincare Essentials</h3>
+            <p>
+              Learn the fundamentals of proper skincare, from cleansing routines to advanced treatments for healthy, glowing skin.
+            </p>
+            <a href="skincare.html" class="learn-more">Learn More →</a>
+          </div>
+
+          <div class="momo">
+            <div class="momo-icon">
+              <img src="/images/icon-hair.png" alt="Hair Icon" />
+            </div>
+            <h3>Hair Care & Styling</h3>
+            <p>
+              Master hair care techniques, styling methods, and product selection for every hair type and desired look.
+            </p>
+            <a href="hair.html" class="learn-more">Learn More →</a>
+          </div>
+
+          <div class="momo">
+            <div class="momo-icon">
+              <img src="/images/icon-makeup.png" alt="Makeup Icon" />
+            </div>
+            <h3>Makeup & Beauty</h3>
+            <p>
+              Discover makeup techniques, color theory, and beauty application methods for natural to glamorous looks.
+            </p>
+            <a href="beauty.html" class="learn-more">Learn More →</a>
+          </div>
+
+          <div class="momo">
+            <div class="momo-icon">
+              <img src="/images/icon-hygiene.png" alt="Hygiene Icon" />
+            </div>
+            <h3>Personal Hygiene</h3>
+            <p>
+              Build healthy hygiene habits with expert guidance on daily routines, product selection, and best practices.
+            </p>
+            <a href="hygine.html" class="learn-more">Learn More →</a>
+          </div>
+
+          <div class="momo">
+            <div class="momo-icon">
+              <img src="/images/icon-nailcare.png" alt="Nail Care Icon" />
+            </div>
+            <h3>Nail Care</h3>
+            <p>
+              Perfect your nail care routine with professional techniques for healthy, beautiful nails and cuticles.
+            </p>
+            <a href="nail.html" class="learn-more">Learn More →</a>
+          </div>
+        </div>
+      </div> 
+    </section>
+
+    <!-- Learning Journey Section -->
+    <section class="grooming-section">
+      <div class="container">
+        <h2 class="grooming-title">Master Your <span>Grooming Skills</span></h2>
+        <p class="grooming-subtext">
+            Elevate your grooming skills with step-by-step lessons, expert advice, and hands-on tutorials. No matter your level, our platform guides you to confidence and mastery in personal care.
+        </p>
+
+        <div class="grooming-stats">
+            <div class="stat-card expanded">
+              <div class="stat-number blue">100+</div>
+              <div class="stat-label">Video Lessons</div>
+              <p class="stat-description">
+                Explore a wide range of high-quality video lessons covering skincare, hair care, makeup, and more. Each lesson is designed by industry experts to help you master essential grooming skills at your own pace.
+              </p>
+              <a href="videos.html"><button class="btn blue" style="margin-top: 10px;">Watch Now</button></a>
+            </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Learning Path Cards Section -->
+    <section class="learning-path-section">
+      <h3 class="grooming-path">Choose Your Learning Path</h3>
+      <div class="container">
+        <div class="learning-cards">
+          <!-- Beginner Card -->
+          <div class="card beginner">
+            <div class="icon">🌱</div>
+            <h4>Beginner</h4>
+            <p>Perfect for those just starting their grooming journey. Learn the fundamentals and build confidence.</p>
+            <ul>
+              <li>Basic skincare routine</li>
+              <li>Hair care essentials</li>
+              <li>Grooming tools guide</li>
+            </ul>
+            <!-- <button class="btn blue">Start Learning</button> -->
+          </div>
+
+          <!-- Intermediate Card -->
+          <div class="card intermediate">
+            <div class="icon">🚀</div>
+            <h4>Intermediate</h4>
+            <p>Take your skills to the next level with advanced techniques and specialized knowledge.</p>
+            <ul>
+              <li>Advanced makeup techniques</li>
+              <li>Professional styling</li>
+              <li>Color theory & matching</li>
+            </ul>
+            <!-- <button class="btn purple">Continue Learning</button> -->
+          </div>
+
+          <!-- Advanced Card -->
+          <div class="card advanced">
+            <div class="icon">👑</div>
+            <h4>Advanced</h4>
+            <p>Master-level courses for professionals and enthusiasts who want to excel in their craft.</p>
+            <ul>
+              <li>Professional artistry</li>
+              <li>Business & branding</li>
+              <li>Master class sessions</li>
+            </ul>
+            <!-- <button class="btn gray">Master Your Craft</button> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Courses Section -->
+    <section class="featured-courses">
+      <div class="container">
+        <h2>Featured Courses</h2>
+        <p class="subheading">Handpicked courses from our top instructors to help you achieve your grooming goals</p>
+
+        <div class="courses-container">
+          <!-- Course 1 -->
+          <div class="course-card">
+            <div class="card-image">
+              <span class="tag new">New</span>
+              <img src="/images/Complete Skincare Mastery.webp" alt="Course 1">
+            </div>
+            <div class="card-body">
+              <h3>Complete Skincare Mastery</h3>
+              <p>Learn everything from basic cleansing to advanced anti-aging techniques.</p>
+              <div class="meta">
+                <span class="rating">⭐ 4.9 <small>(234)</small></span>
+                <span class="duration">⏱ 6 hours</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 2 -->
+          <div class="course-card">
+            <div class="card-image">
+              <span class="tag popular">Popular</span>
+              <img src="/images/Makeup Artistry Fundamentals.jpg" alt="Course 2">
+            </div>
+            <div class="card-body">
+              <h3>Makeup Artistry Fundamentals</h3>
+              <p>Master the art of makeup application with professional techniques.</p>
+              <div class="meta">
+                <span class="rating">⭐ 4.8 <small>(189)</small></span>
+                <span class="duration">⏱ 8 hours</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Course 3 -->
+          <div class="course-card">
+            <div class="card-image">
+              <span class="tag trending">Trending</span>
+              <img src="/images/Hair Styling & Care.webp" alt="Course 3">
+            </div>
+            <div class="card-body">
+              <h3>Hair Styling & Care</h3>
+              <p>Transform your hair with professional styling techniques and care tips.</p>
+              <div class="meta">
+                <span class="rating">⭐ 4.7 <small>(156)</small></span>
+                <span class="duration">⏱ 5 hours</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Platform Features Section -->
+    <section class="platform-features">
+      <div class="container">
+        <div class="section-header">
+          <h2>Why Choose Our Learning Platform?</h2>
+          <p>Experience the difference with our comprehensive learning features</p>
+        </div>
+        <div class="features-grid">
+          <div class="feature">
+            <div class="feature-icon blue">▶</div>
+            <h3>HD Video Lessons</h3>
+            <p>Crystal clear video quality with step-by-step instructions</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon gray">👥</div>
+            <h3>Community</h3>
+            <p>Join thousands of learners in our supportive community</p>
+          </div>
+          <div class="feature">
+            <div class="feature-icon gray">🎧</div>
+            <h3>24/7 Support</h3>
+            <p>Get help whenever you need it from our expert team</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Ready to Start Your Journey?</h2>
+          <p>Join thousands of learners who have transformed their grooming skills with our platform</p>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Guides Section -->
+    <section class="guides-section">
+      <div class="container">
+        <div class="guides-content">
+          <div class="guides-text">
+            <h2>Comprehensive <span class="blue-text">Grooming</span> <span class="pink-text">Guides</span></h2>
+            <p>Access step-by-step tutorials, expert techniques, and detailed guides that will transform your grooming routine from basic to professional.</p>
+            <ul>
+              <li><strong>Step-by-Step Tutorials:</strong> Detailed instructions with visual guides for every grooming technique</li>
+              <li><strong>Product Recommendations:</strong> Curated selections of the best products for every budget and need</li>
+              <li><strong>Expert Techniques:</strong> Professional secrets and advanced methods from industry experts</li>
+            </ul>
+            
+          </div>
+          <div class="guides-images">
+            <img src="/images/guide 1.webp" alt="Guide 1" class="guide-img">
+            <img src="/images/guide 2.webp" alt="Guide 2" class="guide-img">
+            <img src="/images/guide 3.webp" alt="Guide 3" class="guide-img">
+            <img src="/images/guide4.webp" alt="Guide 4" class="guide-img">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="/images/logo.png" alt="Personal Grooming Logo">
+          <h3>Personal Grooming</h3>
+          <p>Master the art of personal care</p>
+         </div class ="">
+          <div class="link-group">
+            <h4>Learn</h4>
+            <a href="post-hair-growth.html">Personal Hygiene</a>
+            <a href="post-hydration-science.html">skinCare</a>
+            <a href="post-minimalist-makeup.html">Makeup & Beauty</a>
+            <a href="post-nail-care.html">Nail Care</a>
+            <a href="post-hair-care.html">Hair Care</a>
+          </div>
+          <div class="link-group">
+            <h4>Quick links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="skincare.html">Skincare</a>
+            <a href="nail.html">Nail Care</a>
+            <a href="hair.html">Hair Care</a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Personal Grooming. All rights reserved.</p> 
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    // GSAP Animations
+    document.addEventListener('DOMContentLoaded', () => {
+      // Register ScrollTrigger plugin
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Hero section animation
+      gsap.from('.hero-text h2, .hero-text p, .hero-buttons', {
+        duration: 1,
+        y: 50,
+        opacity: 1,
+        stagger: 0.2,
+        ease: "power3.out"
+      });
+
+      gsap.from('.hero-image', {
+        duration: 1,
+        x: 50,
+        opacity: 1,
+        delay: 0.3,
+        ease: "power3.out"
+      });
+
+      // Features section animation
+      gsap.from('.momo', {
+        scrollTrigger: {
+          trigger: '.features',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        stagger: 0.15,
+        ease: "back.out(1.7)"
+      });
+
+      // Learning path cards animation
+      gsap.from('.learning-cards .card', {
+        scrollTrigger: {
+          trigger: '.learning-path-section',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 100,
+        opacity: 1,
+        stagger: 0.2,
+        ease: "power2.out"
+      });
+
+      // Featured courses animation
+      gsap.from('.course-card', {
+        scrollTrigger: {
+          trigger: '.featured-courses',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 80,
+        opacity: 1,
+        stagger: 0.15,
+        ease: "power2.out"
+      });
+
+      // Platform features animation
+      gsap.from('.features-grid .feature', {
+        scrollTrigger: {
+          trigger: '.platform-features',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.6,
+        scale: 0.8,
+        opacity: 1,
+        stagger: 0.1,
+        ease: "back.out(1.7)"
+      });
+
+      // Guides section animation
+      gsap.from('.guides-text, .guides-images img', {
+        scrollTrigger: {
+          trigger: '.guides-section',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        stagger: 0.15,
+        ease: "power2.out"
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Video Lessons | Personal Grooming Mastery</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+  <style>
+    /* Base Styles */
+    :root {
+      --primary: #3a7d44;
+      --primary-light: #5d9c67;
+      --secondary: #2b4e6b;
+      --accent: #e8c547;
+      --dark: #1a1a1a;
+      --light: #f8f9fa;
+      --gray: #6c757d;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      line-height: 1.6;
+      color: var(--dark);
+      background-color: #fff;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Header */
+    header {
+      background-color: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 15px 0;
+    }
+
+    .nav-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo img {
+      height: 40px;
+    }
+
+    .logo h1 {
+      font-size: 1.2rem;
+      line-height: 1.2;
+    }
+
+    /* Video Hero */
+    .video-hero {
+      background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+      padding: 80px 0;
+      text-align: center;
+    }
+
+    .video-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: var(--secondary);
+    }
+
+    .video-hero p {
+      max-width: 700px;
+      margin: 0 auto 40px;
+      color: var(--gray);
+    }
+
+    /* Video Categories */
+    .video-categories {
+      padding: 60px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    .section-header h2 {
+      font-size: 2rem;
+      color: var(--secondary);
+      margin-bottom: 15px;
+    }
+
+    .category-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+
+    .category-tab {
+      padding: 10px 20px;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      font-weight: 500;
+    }
+
+    .category-tab.active, .category-tab:hover {
+      background: var(--primary);
+      color: white;
+      border-color: var(--primary);
+    }
+
+    /* Video Grid */
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .video-card {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      transition: transform 0.3s ease;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-info {
+      padding: 20px;
+    }
+
+    .video-info h3 {
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .video-info p {
+      color: var(--gray);
+      font-size: 0.9rem;
+    }
+
+    .video-meta {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 15px;
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    /* Featured Video */
+    .featured-video {
+      padding: 60px 0;
+      background-color: var(--light);
+    }
+
+    .featured-container {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 30px;
+    }
+
+    .main-video {
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .video-sidebar {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .sidebar-video {
+      display: flex;
+      gap: 15px;
+      background: white;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+      cursor: pointer;
+    }
+
+    .sidebar-thumbnail {
+      width: 120px;
+      height: 80px;
+      position: relative;
+      flex-shrink: 0;
+    }
+
+    .sidebar-thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .sidebar-thumbnail::after {
+      content: "▶";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: white;
+      background: rgba(0, 0, 0, 0.5);
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.8rem;
+    }
+
+    .sidebar-info {
+      padding: 10px 10px 10px 0;
+    }
+
+    .sidebar-info h4 {
+      font-size: 0.9rem;
+      margin-bottom: 5px;
+    }
+
+    .sidebar-info p {
+      font-size: 0.8rem;
+      color: var(--gray);
+    }
+
+    /* Responsive */
+    @media (max-width: 1024px) {
+      .featured-container {
+        grid-template-columns: 1fr;
+      }
+      
+      .video-sidebar {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .video-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+      
+      .video-hero h1 {
+        font-size: 2rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .video-grid {
+        grid-template-columns: 1fr;
+      }
+      
+      .video-sidebar {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <img src="/images/logo.png" alt="Personal Grooming Logo">
+        <h1>Personal Grooming</h1>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="videos.html" class="active">Video Lessons</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Video Hero Section -->
+    <section class="video-hero">
+      <div class="container">
+        <h1>Master Personal Grooming with Our Video Lessons</h1>
+        <p>Learn professional techniques from our experts through high-quality video tutorials. Perfect your routine at your own pace.</p>
+      </div>
+    </section>
+
+    <!-- Featured Video Section -->
+    <section class="featured-video">
+      <div class="container">
+        <div class="section-header">
+          <h2>Featured This Week</h2>
+          <p>Most watched tutorials by our community</p>
+        </div>
+        
+        <div class="featured-container">
+          <div class="main-video">
+            <div class="video-container">
+              <!-- Replace with your actual YouTube/Vimeo embed code -->
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/9pLk3OU6bOs?si=EAZFX67_wJwE73P3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <div class="video-info">
+              <h3>The Complete Morning Grooming Routine for Men</h3>
+              <p>Learn the essential steps every man should include in his morning routine for a polished, professional look all day.</p>
+              <div class="video-meta">
+                <span>25 min</span>
+                <span>12,345 views</span>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Categories Section -->
+    <section class="video-categories">
+      <div class="container">
+        <div class="section-header">
+            <h2>Find Tutorials by Category</h2>
+            <p>Explore our categories to discover grooming tutorials tailored to your needs</p>
+        </div>
+        
+        <div class="video-grid">
+          <!-- Video Card 1 -->
+          <div class="video-card">
+            <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/OrElyY7MFVs?si=Vd8KaI9zL7E_Fxr5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+            <div class="video-info">
+              <h3>Daily Skincare Routine for All Skin Types</h3>
+              <p>Build the perfect skincare routine tailored to your specific skin needs.</p>
+              <div class="video-meta">
+                <span>18 min</span>
+                <span>9,876 views</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Video Card 2 -->
+          <div class="video-card">
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/qpoWO5jE-Gk?si=-316RugdfeX9G51i" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+            <div class="video-info">
+              <h3>Professional Haircut Maintenance at Home</h3>
+              <p>Extend the life of your haircut with these professional tips.</p>
+              <div class="video-meta">
+                <span>14 min</span>
+                <span>7,543 views</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Video Card 3 -->
+          <div class="video-card">
+            <div class="video-container">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/zXIofF28eYk?si=LV41kQFwx9JO4x8J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            </div>
+            <div class="video-info">
+              <h3>The Art of Beard Grooming & Styling</h3>
+              <p>From trimming to styling products, master your beard game.</p>
+              <div class="video-meta">
+                <span>22 min</span>
+                <span>11,234 views</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Video Card 4 -->
+          <div class="video-card">
+            <div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KwJ8tYTbu3I?si=aPw0JYnrTVMuS2h2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
+</div>
+            <div class="video-info">
+              <h3>Women's Hair Care & Styling Tips</h3>
+              <p>Discover essential tips for healthy, beautiful hair and easy styling techniques.</p>
+              <div class="video-meta">
+                <span>12 min</span>
+                <span>5,678 views</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Video Card 5 -->
+          <div class="video-card">
+            <div class="video-container">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/vEyzhPdRFXA?si=Yotn5aQF2iW76T8e" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
+</div>
+            <div class="video-info">
+              <h3>Choosing the Right Hair Products</h3>
+              <p>Navigate the overwhelming world of hair styling products.</p>
+              <div class="video-meta">
+                <span>16 min</span>
+                <span>8,901 views</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Video Card 6 -->
+          <div class="video-card">
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/4iz2TqiS4PE?si=sDzhjvK0NGFvUg9J" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>            
+            </div>
+            <div class="video-info">
+              <h3>How To Shave With An Electric Shaver | 4 Essential Steps</h3>
+              <p>Pros and cons of each method to help you decide what's best.</p>
+              <div class="video-meta">
+                <span>20 min</span>
+                <span>10,345 views</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+   <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="/images/logo.png" alt="Personal Grooming Logo">
+          <h3>Personal Grooming</h3>
+          <p>Master the art of personal care</p>
+         </div class ="">
+          <div class="link-group">
+            <h4>Learn</h4>
+            <a href="post-hair-growth.html">Personal Hygiene</a>
+            <a href="post-hydration-science.html">skinCare</a>
+            <a href="post-minimalist-makeup.html">Makeup & Beauty</a>
+            <a href="post-nail-care.html">Nail Care</a>
+            <a href="post-hair-care.html">Hair Care</a>
+          </div>
+          <div class="link-group">
+            <h4>Quick links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="skincare.html">Skincare</a>
+            <a href="nail.html">Nail Care</a>
+            <a href="hair.html">Hair Care</a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Personal Grooming. All rights reserved.</p> 
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Tab functionality
+    const tabs = document.querySelectorAll('.category-tab');
+    
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        // Remove active class from all tabs
+        tabs.forEach(t => t.classList.remove('active'));
+        // Add active class to clicked tab
+        tab.classList.add('active');
+        
+        // Here you would typically filter videos by category
+        // This would require more advanced JavaScript or backend integration
+        console.log(`Selected category: ${tab.textContent}`);
+      });
+    });
+    
+    // Sidebar video click functionality
+    const sidebarVideos = document.querySelectorAll('.sidebar-video');
+    
+    sidebarVideos.forEach(video => {
+      video.addEventListener('click', () => {
+        // In a real implementation, this would change the main video
+        console.log('Loading selected video...');
+      });
+    });
+  </script>
+</body>
+</html>

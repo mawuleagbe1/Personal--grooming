@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Makeup & Beauty | Personal Grooming</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body class="makeup-page">
+  <header class="navbar makeup-nav">
+    <div class="container nav-content">
+      <div class="logo">
+        <img src="/images/logo.png" alt="Personal Grooming Logo">
+        <h1>Personal<br>Grooming</h1>
+      </div>
+      <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+       <a href="about.html">About</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html" class="active">Contact</a>
+</nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Glam Hero Section -->
+    <section class="makeup-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Unleash Your <span class="highlight">Beauty Potential</span></h1>
+            <p class="subtitle">Master professional makeup techniques tailored to your unique features</p>
+          </div>
+          <div class="hero-image">
+            <div class="makeup-palette">
+              <img src="/images/Makeup palette.jpg" alt="Makeup palette" class="palette">
+              <img src="/images/brushes.jpg" alt="Makeup brushes" class="brushes">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Beauty Style Finder -->
+    <section class="style-finder">
+      <div class="container">
+        <div class="section-header">
+          <h2>Discover Your <span class="highlight">Beauty Style</span></h2>
+          <p>Take our quiz to find makeup looks that complement your features and personality</p>
+        </div>
+        
+        <div class="style-cards">
+          <div class="style-card">
+            <div class="style-image">
+              <img src="/images/Natural glam look.jpg" alt="Natural glam look">
+              <div class="style-overlay">
+                <h3>Natural Glam</h3>
+              </div>
+            </div>
+          </div>
+          
+          <div class="style-card">
+            <div class="style-image">
+              <img src="/images/Bold glam look.jpg" alt="Bold glam look">
+              <div class="style-overlay">
+                <h3>Bold Glam</h3>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Additional style cards would follow -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Makeup Masterclass -->
+    <section class="masterclass">
+      <div class="container">
+        <div class="section-header">
+          <h2>Makeup <span class="highlight">Masterclass</span></h2>
+          <p>Step-by-step guides for flawless application</p>
+        </div>
+        
+        <div class="masterclass-tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="foundation">Foundation</button>
+            
+          </div>
+          
+          <div class="tab-content active" id="foundation">
+            <div class="tab-inner">
+              <div class="technique-video">
+                <div class="video-placeholder">
+                  <img src="/images/foundation-tutorial.jpg" alt="Foundation tutorial">
+                </div>
+              </div>
+              <div class="technique-steps">
+                <h3>Flawless Foundation Application</h3>
+                <ol>
+                  <li>Prep skin with moisturizer</li>
+                  <li>Apply primer suited to your skin type</li>
+                  <li>Dot foundation on face and blend outward</li>
+                  <li>Build coverage gradually</li>
+                </ol>
+                <div class="product-picks">
+                  <div class="products">
+                    <div class="product">
+                      <img src="/images/foundation-product.jpg" alt="Foundation product">
+                    </div>
+                    <!-- Additional products would follow -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Other tab contents would follow same pattern -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Face Shape Guide -->
+    <section class="face-shape">
+      <div class="container">
+        <div class="section-header">
+          <h2>Makeup for Your <span class="highlight">Face Shape</span></h2>
+          <p>Enhance your natural features with these professional techniques</p>
+        </div>
+        <div class="shape-tips">
+          <div class="tips-content" data-shape="oval">
+            <h3>Oval Face Makeup Tips</h3>
+            <p>
+              For a fresh, youthful makeup look, start by focusing blush on the apples of your cheeks—smile lightly to locate them, then blend upward toward your temples for a natural flush. Next, highlight the center of your forehead and chin with a luminous product to brighten your complexion and create dimension, drawing attention to the middle of your face
+            </p>
+          </div>  
+          <!-- Other shape tips would be hidden by default -->
+        </div>
+        <div class="shape-tips">
+          <div class="tips-content" data-shape="oval">
+            <h3>Round Face Makeup Tips</h3>
+            <p>
+              For Round faces, contouring is key. Apply a matte bronzer along the sides of your forehead and under your cheekbones to create the illusion of length. Use a highlighter on the center of your forehead, nose, and chin to bring attention to the middle of your face. For blush, apply it slightly above the apples of your cheeks and blend diagonally towards your temples for a lifted effect.
+            </p>
+          </div>  
+        </div>
+      </div>
+    </section>
+
+    <!-- Trend Spotlight -->
+    <section class="trend-spotlight">
+      <div class="container">
+        <div class="section-header">
+          <h2>Current <span class="highlight">Beauty Trends</span></h2>
+          <p>Fresh looks to try this season</p>
+        </div>
+        
+        <div class="trend-carousel">
+          <div class="trend-card">
+            <div class="trend-image">
+              <img src="/images/glass-skin.jpg" alt="Glass skin trend">
+              <div class="trend-badge">Hot Now</div>
+            </div>
+            <div class="trend-content">
+              <h3>Demure looks</h3>
+              <p>Natural, understated makeup with neutral tones and <br>soft textures continues to dominate the beauty scene.</p>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+    </section>
+
+    <!-- Pro Artist Tips -->
+    <section class="pro-tips">
+      <div class="container">
+        <div class="section-header">
+          <h2>Pro Artist <span class="highlight">Secrets</span></h2>
+          <p>Industry tricks you won't learn anywhere else</p>
+        </div>
+        
+        <div class="tips-grid">
+          <div class="tip-card">
+            <div class="tip-icon">💡</div>
+            <h3>Foundation Mixing</h3>
+            <p>
+              Mix two foundation shades for a perfect match. Use a lighter shade on the high points of your face and a darker one on the sides for natural contouring.
+            </p>
+          </div>
+          
+          <div class="tip-card">
+            <div class="tip-icon">✨</div>
+            <h3>Eyeliner Hack</h3>
+            <p>
+              Use a business card or tape to create a sharp winged eyeliner look. Place it at the angle you want and trace along the edge for a perfect line.
+            </p>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+    <!-- Virtual Try-On -->
+    <section class="virtual-tryon">
+      <div class="container">
+        <div class="tryon-content">
+          <div class="tryon-text">
+            <h2>Try Before You Buy</h2>
+            <p>
+              Use our virtual makeup try-on tool to see how different products look on your skin tone and face shape. Experiment with colors and styles before making a purchase.
+            </p>
+          </div>
+          <div class="tryon-image">
+            <img src="/images/Virtual makeup try-on.jpg" alt="Virtual makeup try-on">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="/images/logo.png" alt="Personal Grooming Logo">
+          <h3>Personal Grooming</h3>
+          <p>Master the art of personal care</p>
+         </div class ="">
+          <div class="link-group">
+            <h4>Learn</h4>
+            <a href="post-hair-growth.html">Personal Hygiene</a>
+            <a href="post-hydration-science.html">skinCare</a>
+            <a href="post-minimalist-makeup.html">Makeup & Beauty</a>
+            <a href="post-nail-care.html">Nail Care</a>
+            <a href="post-hair-care.html">Hair Care</a>
+          </div>
+          <div class="link-group">
+            <h4>Quick links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="skincare.html">Skincare</a>
+            <a href="nail.html">Nail Care</a>
+            <a href="hair.html">Hair Care</a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Personal Grooming. All rights reserved.</p> 
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    // GSAP Animations
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+      
+      // Hero animation
+      gsap.from('.makeup-hero h1', {
+        duration: 1,
+        y: 50,
+        opacity: 1,
+        ease: "back.out(1.2)"
+      });
+      
+      gsap.from('.makeup-hero .subtitle', {
+        duration: 0.8,
+        y: 30,
+        opacity: 1,
+        delay: 0.3,
+        ease: "power2.out"
+      });
+      
+      gsap.from('.hero-buttons', {
+        duration: 0.6,
+        y: 20,
+        opacity: 1,
+        delay: 0.6,
+        ease: "power2.out"
+      });
+      
+      gsap.from('.palette', {
+        duration: 1,
+        rotation: -10,
+        x: 50,
+        opacity: 1,
+        delay: 0.3,
+        ease: "back.out(1.2)"
+      });
+      
+      gsap.from('.brushes', {
+        duration: 1,
+        rotation: 10,
+        x: -50,
+        opacity: 1,
+        delay: 0.6,
+        ease: "back.out(1.2)"
+      });
+      
+      // Style cards animation
+      gsap.from('.style-card', {
+        scrollTrigger: {
+          trigger: '.style-finder',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        stagger: 0.15,
+        ease: "back.out(1.2)"
+      });
+      
+      // Masterclass animation
+      gsap.from('.masterclass-tabs', {
+        scrollTrigger: {
+          trigger: '.masterclass',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        ease: "power2.out"
+      });
+      
+      // Face shape animation
+      gsap.from('.shape-selector', {
+        scrollTrigger: {
+          trigger: '.face-shape',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        ease: "power2.out"
+      });
+      
+      // Trend cards animation
+      gsap.from('.trend-card', {
+        scrollTrigger: {
+          trigger: '.trend-spotlight',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.6,
+        scale: 0.9,
+        opacity: 1,
+        stagger: 0.1,
+        ease: "back.out(1.7)"
+      });
+      
+      // Pro tips animation
+      gsap.from('.tip-card', {
+        scrollTrigger: {
+          trigger: '.pro-tips',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.5,
+        rotation: 5,
+        opacity: 1,
+        stagger: 0.1,
+        ease: "back.out(1.7)"
+      });
+      
+      // Tab switching functionality
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabContents = document.querySelectorAll('.tab-content');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons and contents
+          tabBtns.forEach(btn => btn.classList.remove('active'));
+          tabContents.forEach(content => content.classList.remove('active'));
+          
+          // Add active class to clicked button and corresponding content
+          btn.classList.add('active');
+          const tabId = btn.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+          
+          // Animation for tab content
+          gsap.from(`#${tabId}`, {
+            duration: 0.5,
+            y: 30,
+            opacity: 1,
+            ease: "power2.out"
+          });
+        });
+      });
+      
+      // Face shape selector
+      const faceOptions = document.querySelectorAll('.shape-option input');
+      const shapeTips = document.querySelectorAll('.tips-content');
+      
+      faceOptions.forEach(option => {
+        option.addEventListener('change', () => {
+          const shape = option.id;
+          
+          // Hide all tips
+          shapeTips.forEach(tip => tip.style.display = 'none');
+          
+          // Show selected tip
+          document.querySelector(`.tips-content[data-shape="${shape}"]`).style.display = 'block';
+          
+          // Animation
+          gsap.from(`.tips-content[data-shape="${shape}"]`, {
+            duration: 0.5,
+            y: 30,
+            opacity: 1,
+            ease: "power2.out"
+          });
+        });
+      });
+    });
+  </script>
+</body>
+</html>

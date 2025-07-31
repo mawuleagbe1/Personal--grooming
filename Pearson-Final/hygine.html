@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Hygiene | Personal Grooming</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body class="hygiene-page">
+  <header class="navbar hygiene-nav">
+    <div class="container nav-content">
+      <div class="logo">
+        <img src="/images/logo.png" alt="Personal Grooming Logo">
+        <h1>Personal<br>Grooming</h1>
+      </div>
+      <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+       <a href="about.html">About</a>
+   
+  <a href="blog.html">Blog</a>
+  <a href="contact.html" class="active">Contact</a>
+</nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hygiene-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Master Your <span class="highlight">Personal Hygiene</span></h1>
+            <p class="subtitle">Science-based practices for optimal health and confidence</p>
+            <div class="hero-buttons">
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="/images/Hygiene products.webp" alt="Hygiene products" class="main-image">
+            <div class="science-badge">
+              <img src="/images/medical-icon.png" alt="Medical approved">
+              <p>Medically reviewed</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Daily Hygiene Routine -->
+    <section class="daily-routine">
+      <div class="container">
+        <div class="section-header">
+          <h2>The Complete <span class="highlight">Daily Hygiene</span> Routine</h2>
+          <p>Essential practices for all ages and lifestyles</p>
+        </div>
+        
+        <div class="routine-timeline">
+          <div class="timeline-item">
+            <div class="time">Morning</div>
+            <div class="routine-content">
+              <h3>Start Your Day Fresh</h3>
+              <ul>
+                <li><strong>Oral Care:</strong> Maintaining proper oral care involves brushing twice daily with fluoride toothpaste to remove plaque and prevent cavities, flossing once a day to clean between teeth and gums where a toothbrush can't reach, and using an antimicrobial mouthwash to reduce bacteria and freshen breath.</li>
+                <li><strong>Face Wash:</strong> Use a gentle cleanser suitable for your skin type to remove overnight oil and dirt, followed by a toner to balance pH levels and a moisturizer with SPF to protect against UV damage</li>
+                <li><strong>Deodorant:</strong> Apply a long-lasting deodorant or antiperspirant to prevent body odor and sweat throughout the day</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="time">Throughout Day</div>
+            <div class="routine-content">
+              <h3>Maintain Freshness</h3>
+              <ul>
+                <li><strong>Hand Washing:</strong> Wash hands with soap for at least 20 seconds, especially before meals and after using the restroom</li>
+                <li><strong>Oral Refresh:</strong> Carry a travel toothbrush or mouthwash for after meals</li>
+                <li><strong>Body Wipes:</strong> Use antibacterial wipes for quick freshening up</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="time">Evening</div>
+            <div class="routine-content">
+              <h3>Wind Down Clean</h3>
+              <ul>
+                <li><strong>Shower/Bath:</strong> Shower with a gentle cleanser to remove sweat and dirt, focusing on areas prone to odor like underarms and feet</li>
+                <li><strong>Nighttime Oral Care:</strong> Brush teeth and floss before bed to remove food particles and plaque</li>
+                <li><strong>Skin Care:</strong> Apply moisturizer to face and body to prevent dryness</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Hygiene Science -->
+    <section class="hygiene-science">
+      <div class="container">
+        <div class="section-header">
+          <h2>The Science of <span class="highlight">Clean</span></h2>
+          <p>Understanding why these practices matter</p>
+        </div>
+        
+        <div class="science-grid">
+          <div class="science-card">
+            <div class="science-icon">
+              <img src="/images/bacteria-icon.png" alt="Bacteria">
+            </div>
+            <h3>Microbiome Balance</h3>
+            <p>Proper hygiene maintains healthy bacteria while removing harmful pathogens</p>
+            <!-- <button class="science-btn">Learn More</button> -->
+          </div>
+          
+          <div class="science-card">
+            <div class="science-icon">
+              <img src="/images/Immune system.jpg" alt="Immune system">
+            </div>
+            <h3>Disease Prevention</h3>
+            <p>Reduces transmission of viruses and bacteria by 50-80%</p>
+            <!-- <button class="science-btn">Learn More</button> -->
+          </div>
+          
+          <!-- Additional science cards would follow -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Guide -->
+    <section class="product-guide">
+      <div class="container">
+        <div class="section-header">
+          <h2>Hygiene <span class="highlight">Product Guide</span></h2>
+          <p>Choosing the right products for your needs</p>
+        </div>
+        
+        <div class="product-tabs">
+          <div class="tab-content active" id="oral">
+            <div class="product-content">
+              <div class="product-info">
+                <h3>Optimal Oral Hygiene</h3>
+                <div class="product-category">
+                  <h4>Toothpaste</h4>
+                  <ul>
+                    <li>Fluoride-containing for cavity prevention</li>
+                    <li>Sensitive formulas for delicate teeth</li>
+                    <li>Avoid harsh abrasives</li>
+                  </ul>
+                </div>
+                <div class="product-category">
+                  <h4>Toothbrushes</h4>
+                  <ul>
+                    <li>Soft bristles to protect enamel</li>
+                    <li>Electric brushes for better plaque removal</li>
+                    <li>Replace every 3 months</li>
+                  </ul>
+                </div>
+              </div>
+              <div class="product-image">
+                <img src="/images/Oral care products.jpg" alt="Oral care products">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Mistakes -->
+    <section class="hygiene-mistakes">
+      <div class="container">
+        <div class="section-header">
+          <h2>Avoid These <span class="highlight">Hygiene Mistakes</span></h2>
+          <p>Surprisingly common errors that undermine your efforts</p>
+        </div>
+        
+        <div class="mistakes-accordion">
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <span class="mistake-icon">❌</span>
+              Overwashing Hands
+            </button>
+            <div class="accordion-content">
+              <p>While hand hygiene is crucial, excessive washing with harsh soaps can strip protective oils, leading to cracks where bacteria can enter. Opt for gentle, moisturizing cleansers and wash only when necessary.</p>
+            </div>
+          </div>
+          
+          <div class="accordion-item">
+            <button class="accordion-btn">
+              <span class="mistake-icon">❌</span>
+              Sharing Personal Items
+            </button>
+            <div class="accordion-content">
+              <p>Towels, razors, and even soap bars can harbor bacteria and fungi. Always use personal hygiene items and replace them regularly.</p>
+            </div>
+          </div>
+          
+          <!-- Additional accordion items would follow -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Special Situations -->
+    <section class="special-situations">
+      <div class="container">
+        <div class="section-header">
+          <h2>Hygiene for <span class="highlight">Special Situations</span></h2>
+          <p>Tailored advice for different circumstances</p>
+        </div>
+        
+        <div class="situation-cards">
+          <div class="situation-card">
+            <div class="situation-image">
+              <img src="/images/Workout hygiene.jpg" alt="Workout hygiene">
+            </div>
+            <div class="situation-content">
+              <h3>Post-Workout</h3>
+              <ul>
+                <li>Shower within 30 minutes</li>
+                <li>Use antifungal products if prone to infections</li>
+                <li>Change out of sweaty clothes immediately</li>
+              </ul>
+            </div>
+          </div>
+          
+          <div class="situation-card">
+            <div class="situation-image">
+              <img src="/images/travel-hygiene.jpg" alt="Travel hygiene">
+            </div>
+            <div class="situation-content">
+              <h3>Travel</h3>
+              <ul>
+                <li>Pack disinfectant wipes for surfaces</li>
+                <li>Bring travel-sized hand sanitizer</li>
+                <li>Stay hydrated to support natural defenses</li>
+              </ul>
+            </div>
+          </div>
+        
+        </div>
+      </div>
+    </section>
+
+    <!-- Hygiene & Mental Health -->
+    <section class="mental-health">
+      <div class="container">
+        <div class="health-content">
+          <div class="health-text">
+            <h2>The <span class="highlight">Mental Health</span> Connection</h2>
+            <p>Maintaining personal hygiene routines can significantly impact your psychological well-being:</p>
+            <ul>
+              <li>Reduces stress and anxiety levels</li>
+              <li>Boosts self-esteem and confidence</li>
+              <li>Creates structure during difficult times</li>
+              <li>Improves sleep quality</li>
+            </ul>
+            <!-- <button class="health-btn">Learn Coping Strategies</button> -->
+          </div>
+          <div class="health-image">
+            <img src="/images/Mental health connection.jpg" alt="Mental health connection">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="/images/logo.png" alt="Personal Grooming Logo">
+          <h3>Personal Grooming</h3>
+          <p>Master the art of personal care</p>
+         </div class ="">
+          <div class="link-group">
+            <h4>Learn</h4>
+            <a href="post-hair-growth.html">Personal Hygiene</a>
+            <a href="post-hydration-science.html">skinCare</a>
+            <a href="post-minimalist-makeup.html">Makeup & Beauty</a>
+            <a href="post-nail-care.html">Nail Care</a>
+            <a href="post-hair-care.html">Hair Care</a>
+          </div>
+          <div class="link-group">
+            <h4>Quick links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="skincare.html">Skincare</a>
+            <a href="nail.html">Nail Care</a>
+            <a href="hair.html">Hair Care</a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Personal Grooming. All rights reserved.</p> 
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    // GSAP Animations
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+      
+      // Hero animation
+      gsap.from('.hygiene-hero h1', {
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        ease: "back.out(1.2)"
+      });
+      
+      gsap.from('.hygiene-hero .subtitle', {
+        duration: 0.6,
+        y: 30,
+        opacity: 1,
+        delay: 0.2,
+        ease: "power2.out"
+      });
+      
+      gsap.from('.hero-buttons', {
+        duration: 0.5,
+        y: 20,
+        opacity: 1,
+        delay: 0.4,
+        ease: "power2.out"
+      });
+      
+      gsap.from('.main-image', {
+        duration: 0.8,
+        x: 100,
+        opacity: 1,
+        ease: "back.out(1.2)"
+      });
+      
+      // Timeline animation
+      gsap.from('.timeline-item', {
+        scrollTrigger: {
+          trigger: '.daily-routine',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        stagger: 0.2,
+        ease: "power2.out"
+      });
+      
+      // Science cards animation
+      gsap.from('.science-card', {
+        scrollTrigger: {
+          trigger: '.hygiene-science',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.6,
+        scale: 0.9,
+        opacity: 1,
+        stagger: 0.1,
+        ease: "back.out(1.7)"
+      });
+      
+      // Product tabs animation
+      gsap.from('.product-tabs', {
+        scrollTrigger: {
+          trigger: '.product-guide',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        ease: "power2.out"
+      });
+      
+      // Accordion animation
+      gsap.from('.accordion-item', {
+        scrollTrigger: {
+          trigger: '.hygiene-mistakes',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.6,
+        y: 30,
+        opacity: 1,
+        stagger: 0.1,
+        ease: "power2.out"
+      });
+      
+      // Situation cards animation
+      gsap.from('.situation-card', {
+        scrollTrigger: {
+          trigger: '.special-situations',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.6,
+        y: 50,
+        opacity: 1,
+        stagger: 0.15,
+        ease: "back.out(1.2)"
+      });
+      
+      // Mental health section animation
+      gsap.from('.health-text, .health-image', {
+        scrollTrigger: {
+          trigger: '.mental-health',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        ease: "power2.out"
+      });
+      
+      // Tab switching functionality
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabContents = document.querySelectorAll('.tab-content');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons and contents
+          tabBtns.forEach(btn => btn.classList.remove('active'));
+          tabContents.forEach(content => content.classList.remove('active'));
+          
+          // Add active class to clicked button and corresponding content
+          btn.classList.add('active');
+          const tabId = btn.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+          
+          // Animation for tab content
+          gsap.from(`#${tabId}`, {
+            duration: 0.5,
+            y: 30,
+            opacity: 1,
+            ease: "power2.out"
+          });
+        });
+      });
+      
+      // Accordion functionality
+      const accordionBtns = document.querySelectorAll('.accordion-btn');
+      
+      accordionBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const content = btn.nextElementSibling;
+          const isOpen = content.style.maxHeight;
+          
+          // Close all other accordion items
+          document.querySelectorAll('.accordion-content').forEach(item => {
+            if (item !== content) {
+              item.style.maxHeight = null;
+              item.previousElementSibling.classList.remove('active');
+            }
+          });
+          
+          // Toggle current item
+          if (isOpen) {
+            content.style.maxHeight = null;
+            btn.classList.remove('active');
+          } else {
+            content.style.maxHeight = content.scrollHeight + "px";
+            btn.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

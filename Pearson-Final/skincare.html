@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skincare Essentials | Personal Grooming</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.4/ScrollTrigger.min.js"></script>
+</head>
+<body>
+  <header class="navbar">
+    <div class="container nav-content">
+      <div class="logo">
+        <img src="/images/logo.png" alt="Personal Grooming Logo">
+        <h1>Personal<br>Grooming</h1>
+      </div>
+      <nav class="nav-links" id="navLinks">
+      <a href="index.html">Home</a>
+       <a href="about.html">About</a>
+  <a href="blog.html">Blog</a>
+  <a href="contact.html" class="active">Contact</a>
+</nav>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="skincare-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-text">
+            <h1>Master Your <span class="highlight">Skincare Routine</span></h1>
+            <p class="subtitle">Science-backed techniques for healthy, glowing skin at any age</p>
+          </div>
+          <div class="hero-image">
+            <img src="/images/Woman applying skincare products.jpg" alt="Woman applying skincare products">
+            <div class="skin-badge">
+              <div class="badge-icon">✨</div>
+              <p>Recommended by dermatologists</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skin Type Guide -->
+    <section class="skin-type-guide">
+      <div class="container">
+        <h2>Find Your <span class="highlight">Skin Type</span></h2>
+        <p class="section-subtitle">Customize your routine based on your skin's unique needs</p>
+        
+        <div class="skin-types-grid">
+          <div class="skin-type-card">
+            <div class="skin-icon">
+              <img src="/images/oily-skin-icon.png" alt="Oily skin">
+            </div>
+            <h3>Oily Skin</h3>
+            <p>
+              Oily skin is characterized by a shiny complexion, enlarged pores, and a tendency to develop acne. This skin type often produces excess sebum, which can lead to clogged pores and breakouts if not managed with the right skincare routine.
+            </p>
+          </div>
+          
+          <div class="skin-type-card">
+            <div class="skin-icon">
+              <img src="/images/dry-skin-icon.png" alt="Dry skin">
+            </div>
+            <h3>Dry Skin</h3>
+            <p>
+              Dry skin often feels tight, rough, or flaky, and may show visible fine lines. It can be prone to irritation and may appear dull or lackluster, especially after cleansing or exposure to dry environments.
+            </p>
+          </div>
+          
+          <div class="skin-type-card">
+            <div class="skin-icon">
+              <img src="/images/combination-skin-icon.png" alt="Combination skin">
+            </div>
+            <h3>Combination</h3>
+            <p>
+              Combination skin features an oily T-zone (forehead, nose, and chin), dry or normal cheeks, and variable pore sizes. This skin type requires a balanced approach, targeting oil control in some areas while providing hydration in others.
+            </p>
+          </div>
+          
+          <div class="skin-type-card">
+            <div class="skin-icon">
+              <img src="/images/sensitive-skin-icon.png" alt="Sensitive skin">
+            </div>
+            <h3>Sensitive</h3>
+            <p>
+              Sensitive skin is easily irritated and prone to redness, often reacting to various skincare products or environmental factors. It requires gentle, fragrance-free formulations to minimize discomfort and maintain a healthy skin barrier.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Core Routine Section -->
+    <section class="core-routine">
+      <div class="container">
+        <div class="section-header">
+          <h2>The <span class="highlight">2-Step</span> Essential Routine</h2>
+          <p>Daily practices for all skin types</p>
+        </div>
+        
+        <div class="routine-steps">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <div class="step-content">
+              <h3>Cleanse</h3>
+              <p>Remove dirt, oil, and impurities without stripping skin</p>
+              <div class="product-recs">
+                <h4>Recommended Products:</h4>
+                <ul>
+                  <li>CeraVe Hydrating Cleanser</li>
+                  <li>La Roche-Posay Toleriane</li>
+                  <li>Vanicream Gentle Cleanser</li>
+                </ul>
+              </div>
+              <div class="product-recs">
+                <h4>How to use the cleanser:</h4>
+                <p>To properly cleanse your skin, start by choosing a cleanser suited to
+                   your skin type—gentle, creamy formulas for dry or sensitive skin, foaming
+                    or gel-based options for oily or acne-prone skin, and balanced cleansers for 
+                    combination or normal skin. Before applying the cleanser, wash your hands 
+                    to avoid transferring dirt and bacteria, then wet your face with lukewarm water to 
+                    avoid stripping natural oils. Take a small amount of cleanser, lather it between your hands, and massage it onto your face using gentle circular motions, focusing on areas prone to oiliness or congestion. After cleansing for about 20–30 seconds, rinse thoroughly with lukewarm water to remove all residue, then pat your skin dry with a clean towel—avoid rubbing to prevent irritation..</p>
+                
+              </div>
+            </div>
+            <div class="step-image">
+              <img src="/images/cleansing.jpg" alt="Cleansing">
+            </div>
+          </div>
+          
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <div class="step-content">
+              <h3>Tone</h3>
+              <p>Balance pH levels and prepare skin for treatment</p>
+              <div class="product-recs">
+                <h4>Recommended Products:</h4>
+                <ul>
+                  <li>Thayers Witch Hazel Toner</li>
+                  <li>Paula's Choice Enriched Calming Toner</li>
+                  <li>Fresh Rose Deep Hydration Toner</li>
+                </ul>
+              </div>
+              <div class="product-recs">
+                <h4>How to use this Product:</h4>
+               <p>After cleansing, apply your chosen toner—Thayers Witch Hazel Toner, Paula’s 
+                Choice Enriched Calming Toner, or Fresh Rose Deep Hydration Toner—by soaking a 
+                cotton pad or pressing a few drops into your hands, then gently swipe or pat it 
+                over your face and neck. For Thayers (best for oily or acne-prone skin), focus on 
+                balancing and refining pores; for Paula’s Choice (ideal for dry/sensitive skin), allow 
+                the nourishing formula to soothe and replenish; and for Fresh Rose Toner (great for dehydration), 
+                let the hydrating rosewater prep skin for serums</p>
+              </div>
+            </div>
+            <div class="step-image">
+              <img src="/images/toning.jpg" alt="Toning">
+            </div>
+          </div>
+        </div>
+        
+        <div class="routine-infographic">
+          <img src="/images/Skincare routine infographic.jpg" alt="Skincare routine infographic" class="infographic-img">
+          <!-- <button class="download-btn">Download Routine Cheat Sheet</button> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Ingredient Spotlight -->
+    <section class="ingredient-spotlight">
+      <div class="container">
+        <h2>Ingredient <span class="highlight">Spotlight</span></h2>
+        <p class="section-subtitle">Science-backed actives for specific concerns</p>
+        
+        <div class="ingredient-tabs">
+          <div class="tab-buttons">
+            <button class="tab-btn active" data-tab="hyaluronic">Hyaluronic Acid Water Sun Gel</button>
+
+          </div>
+          
+          <div class="tab-content active" id="hyaluronic">
+            <div class="ingredient-content">
+              <div class="ingredient-info">
+                <h3>Hyaluronic acid</h3>
+                <p class="benefits"><strong>Benefits:</strong> Intense hydration, plumps skin, reduces fine lines</p>
+                <p class="best-for"><strong>Best for:</strong> Dryness, dehydration, aging concerns</p>
+                <div class="key-facts">
+                  <h4>Key Facts:</h4>
+                  <ul>
+                    <li>Holds 1000x its weight in water</li>
+                    <li>Works for all skin types</li>
+                    <li>Use morning and night</li>
+                  </ul>
+                </div>
+                <div class="key-facts">
+                  <h4>How To Use Hyaluronic Acid Water Sun Gel:</h4>
+                  <p>To use the Hyaluronic Acid Water Sun Gel, start with cleansed and toned skin, then apply a generous, even layer (about a nickel-sized amount) to your face, neck, and any exposed areas. Gently pat or smooth it in, avoiding harsh rubbing, 
+                    and let it absorb for 1–2 minutes before applying makeup (if needed). Since it contains hyaluronic acid, applying it to slightly damp skin can boost hydration, but always ensure full absorption to prevent pilling</p>
+                </div>
+              </div>
+              <div class="ingredient-image">
+                <img src="/images/hyaluronic-acid.jpg" alt="Hyaluronic Acid">
+              </div>
+            </div>
+          </div>
+          
+          <!-- Other tab contents would go here -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Common Mistakes -->
+    <section class="common-mistakes">
+      <div class="container">
+        <h2>Avoid These <span class="highlight">Skincare Mistakes</span></h2>
+        
+        <div class="mistakes-grid">
+          <div class="mistake-card">
+            <div class="mistake-icon">❌</div>
+            <h3>Over-Exfoliating</h3>
+            <p>Using harsh scrubs or acids (AHA/BHA) too often can strip your skin barrier, leading to irritation, redness, and breakouts. Limit exfoliation to 2–3 times per week (less for sensitive skin).</p>
+          </div>
+          
+          <div class="mistake-card">
+            <div class="mistake-icon">❌</div>
+            <h3>Using Hot Water</h3>
+            <p>Hot showers or face-washing strips natural oils, leading to dryness. Stick to lukewarm water</p>
+          </div>
+          
+          <!-- More mistake cards would follow -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Expert Advice Section -->
+    <section class="expert-advice">
+      <div class="container">
+        <div class="expert-header">
+          <h2>Dermatologist <span class="highlight">Tips</span></h2>
+          <p>Professional advice for optimal skin health</p>
+        </div>
+        
+        <div class="advice-cards">
+          <div class="advice-card">
+            <div class="expert-image">
+              <img src="/images/Sarah Johnson.jpg" alt="Dr. Sarah Chen">
+            </div>
+            <div class="advice-content">
+              <h3>"Layer Products Correctly"</h3>
+              <p class="expert-name">Dr. Sarah Chen, Board-Certified Dermatologist</p>
+              <p class="advice-text">"Always apply products from thinnest to thickest consistency. Start with water-based serums, then oils, and finish with creams."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+   <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <img src="/images/logo.png" alt="Personal Grooming Logo">
+          <h3>Personal Grooming</h3>
+          <p>Master the art of personal care</p>
+         </div class ="">
+          <div class="link-group">
+            <h4>Learn</h4>
+            <a href="post-hair-growth.html">Personal Hygiene</a>
+            <a href="post-hydration-science.html">skinCare</a>
+            <a href="post-minimalist-makeup.html">Makeup & Beauty</a>
+            <a href="post-nail-care.html">Nail Care</a>
+            <a href="post-hair-care.html">Hair Care</a>
+          </div>
+          <div class="link-group">
+            <h4>Quick links</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+            <a href="skincare.html">Skincare</a>
+            <a href="nail.html">Nail Care</a>
+            <a href="hair.html">Hair Care</a>
+          </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 Personal Grooming. All rights reserved.</p> 
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile Menu Toggle
+    function toggleMenu() {
+      document.getElementById("navLinks").classList.toggle("show");
+    }
+
+    // GSAP Animations
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+      
+      // Hero animation
+      gsap.from('.skincare-hero h1', {
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        ease: "back.out(1.2)"
+      });
+      
+      gsap.from('.skincare-hero .subtitle', {
+        duration: 0.6,
+        y: 30,
+        opacity: 1,
+        delay: 0.2,
+        ease: "power2.out"
+      });
+      
+      gsap.from('.skin-quiz-button', {
+        duration: 0.5,
+        y: 20,
+        opacity: 1,
+        delay: 0.4,
+        ease: "power2.out"
+      });
+      
+      gsap.from('.hero-image', {
+        duration: 0.8,
+        x: 100,
+        opacity: 1,
+        ease: "back.out(1.2)"
+      });
+      
+      // Skin type cards animation
+      gsap.from('.skin-type-card', {
+        scrollTrigger: {
+          trigger: '.skin-type-guide',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.6,
+        y: 50,
+        opacity: 1,
+        stagger: 0.15,
+        ease: "back.out(1.2)"
+      });
+      
+      // Routine steps animation
+      gsap.from('.step-card', {
+        scrollTrigger: {
+          trigger: '.core-routine',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        x: -50,
+        opacity: 1,
+        stagger: 0.2,
+        ease: "power2.out"
+      });
+      
+      // Ingredient tabs animation
+      gsap.from('.ingredient-tabs', {
+        scrollTrigger: {
+          trigger: '.ingredient-spotlight',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        ease: "power2.out"
+      });
+      
+      // Tab switching functionality
+      const tabBtns = document.querySelectorAll('.tab-btn');
+      const tabContents = document.querySelectorAll('.tab-content');
+      
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Remove active class from all buttons and contents
+          tabBtns.forEach(btn => btn.classList.remove('active'));
+          tabContents.forEach(content => content.classList.remove('active'));
+          
+          // Add active class to clicked button and corresponding content
+          btn.classList.add('active');
+          const tabId = btn.getAttribute('data-tab');
+          document.getElementById(tabId).classList.add('active');
+          
+          // Animation for tab content
+          gsap.from(`#${tabId}`, {
+            duration: 0.5,
+            x: 50,
+            opacity: 1,
+            ease: "power2.out"
+          });
+        });
+      });
+      
+      // Mistakes grid animation
+      gsap.from('.mistake-card', {
+        scrollTrigger: {
+          trigger: '.common-mistakes',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.5,
+        scale: 0.9,
+        opacity: 1,
+        stagger: 0.1,
+        ease: "back.out(1.7)"
+      });
+      
+      // Expert advice animation
+      gsap.from('.advice-card', {
+        scrollTrigger: {
+          trigger: '.expert-advice',
+          start: "top 70%",
+          toggleActions: "play none none none"
+        },
+        duration: 0.8,
+        y: 50,
+        opacity: 1,
+        ease: "back.out(1.2)"
+      });
+    });
+  </script>
+</body>
+</html>
